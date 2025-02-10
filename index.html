@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+    </head>
+    <body class="loading">
+        <span class="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </span>
+        <div class="container">
+            <span class="history-toggle">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+            </span>
+            <form action="#" class="calculator">
+                <input
+                    class="span"
+                    id="calcInput"
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    spellcheck="false"
+                    readonly
+                >
+                <div class="span">
+                    <span id="angleMode">DEG</span>
+                </div>
+                <div class="span">
+                    <span class="font-bold mr spacing" id="trigToggle">
+                        <span>&#9727;</span>
+                        <p>Trigonometry</p>
+                        <i class="fa-solid fa-chevron-down rotate"></i>
+                    </span>
+                </div>
+                <div class="trig-dropdown" id="trigDropdown">
+                    <button data-operation="sin">sin</button>
+                    <button data-operation="cos">cos</button>
+                    <button data-operation="tan">tan</button>
+                    <button data-operation="asin">asin</button>
+                    <button data-operation="acos">acos</button>
+                    <button data-operation="atan">atan</button>
+                </div>
+                <!-- row -->
+                <button data-operation="mod">mod</button>
+                <button data-operation="pi">&pi;</button>
+                <button data-operation="eps">e</button>
+                <button data-operation="clear">C</button>
+                <button class="font-bold" data-operation="back">&#9003;</button>
+
+                <!-- row -->
+                <button data-operation="square">x<sup>2</sup></button>
+                <button data-operation="cube">x<sup>3</sup></button>
+                <button data-operation="abs">|x|</button>
+                <button data-operation="exponent">exp</button>
+                <button data-operation="reciprocal">1/x</button>
+
+
+                <!-- row -->
+                <button data-operation="x^y">
+                    x
+                    <sup>y</sup>
+                </button>
+                <button data-operation="(">(</button>
+                <button data-operation=")">)</button>
+                <button data-operation="root">&#8730;x</button>
+                <button data-operation="/">&divide;</button>
+                <!-- row -->
+                <button data-operation="n!">n!</button>
+                <button type="button" data-numbers="7">7</button>
+                <button type="button" data-numbers="8">8</button>
+                <button type="button" data-numbers="9">9</button>
+                <button data-operation="×">×</button>
+                <!-- row -->
+                <button data-operation="10x">
+                    10
+                    <sup>x</sup>
+                </button>
+                <button type="button" data-numbers="4">4</button>
+                <button type="button" data-numbers="5">5</button>
+                <button type="button" data-numbers="6">6</button>
+                <button data-operation="-">-</button>
+                <!-- row -->
+                <button data-operation="log">log</button>
+                <button type="button" data-numbers="1">1</button>
+                <button type="button" data-numbers="2">2</button>
+                <button type="button" data-numbers="3">3</button>
+                <button data-operation="+">+</button>
+                <!-- row -->
+                <button data-operation="ln">ln</button>
+                <button data-numbers="Plus/Minus">
+                    <sup>+</sup>/
+                    <sub>-</sub>
+                </button>
+                <button type="button" data-numbers="0">0</button>
+                <button type="button" data-numbers=".">.</button>
+                <button data-operation="eval" class="bg-blue">=</button>
+            </form>
+            <div class="history-panel">
+                <div class="history-header">
+                    <h3 style="display: inline-block;">History</h3>
+                    <span style="float: right;" class="history-close">
+                        <i class="fa-solid fa-times"></i>
+                    </span>
+                </div>
+                <div class="history-list"></div>
+                <button class="clear-history">Clear History</button>
+            </div>
+        </div>
+        <script type="module" src="script.ts"></script>
+    </body>
+</html>
