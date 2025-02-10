@@ -1,4 +1,4 @@
-import { MathUtils } from "./utils";
+import { MathUtils } from "./utils.js";
 
 /**
  * Calculator class that handles all calculator operations and display logic

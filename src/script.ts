@@ -1,4 +1,4 @@
-import { Calculator } from "./ts/Calculator";
+import { Calculator } from "./Calculator.js";
 
 /**
  * Main application initialization function.
@@ -72,10 +72,10 @@ function initializeApp(): void {
   });
 
   // History panel show handler
-  document.querySelector('.history-toggle')?.addEventListener('click', function (e: Event) {
+  document.querySelector('.history-toggle')?.addEventListener('click', function(this: HTMLElement, e: Event) {
     const historyPanel = document.querySelector('.history-panel') as HTMLElement;
     historyPanel.classList.add('show');
-    (this as HTMLElement).style.display = 'none';
+    this.style.display = 'none';
     calculator.renderHistory(document.querySelector('.history-list') as HTMLElement);
   });
 
